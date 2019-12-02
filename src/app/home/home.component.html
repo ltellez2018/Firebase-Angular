@@ -1,4 +1,3 @@
-
 <div class="courses-panel">
 
     <h3>All Courses</h3>
@@ -8,8 +7,8 @@
 
         <mat-tab label="Beginners">
 
-            <courses-card-list
-                    [courses]="[]">
+
+            <courses-card-list (courseEdited)="reloadCouses()" [courses]="begincourses$ | async">
 
             </courses-card-list>
 
@@ -17,10 +16,8 @@
 
         <mat-tab label="Advanced">
 
-            <courses-card-list
-                    [courses]="[]"
+            <courses-card-list (courseEdited)="reloadCouses()" [courses]="advancedcourses$ | async"></courses-card-list>
 
-            ></courses-card-list>
 
         </mat-tab>
 
@@ -29,4 +26,3 @@
 
 
 </div>
-

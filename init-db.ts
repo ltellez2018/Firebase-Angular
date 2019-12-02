@@ -4,12 +4,14 @@ import {COURSES, findLessonsForCourse} from './db-data';
 import * as firebase from 'firebase';
 
 var config = {
-    apiKey: "AIzaSyDNPCbN20dZrAbGChRjyBSDmu2uRiPyBMk",
-    authDomain: "test-a6f61.firebaseapp.com",
-    databaseURL: "https://test-a6f61.firebaseio.com",
-    projectId: "test-a6f61",
-    storageBucket: "test-a6f61.appspot.com",
-    messagingSenderId: "24603706805"
+  apiKey: "AIzaSyCKp_Eq4K-hYJZ1t--dPf07Z0s-t0i2l0Y",
+  authDomain: "fir-course-1194e.firebaseapp.com",
+  databaseURL: "https://fir-course-1194e.firebaseio.com",
+  projectId: "fir-course-1194e",
+  storageBucket: "fir-course-1194e.appspot.com",
+  messagingSenderId: "530958170874",
+  appId: "1:530958170874:web:0e184a2bb1eac03f6e2743",
+  measurementId: "G-7HCVT97B82"
 };
 
 console.log("Uploading data to the database with the following config:\n");
@@ -41,7 +43,7 @@ async function uploadData() {
 
       const courseLessons = findLessonsForCourse(course.id);
 
-      //console.log(`Adding ${courseLessons.length} lessons to ${course.description}`);
+      console.log(`Adding ${courseLessons.length} lessons to ${course.description}`);
 
       courseLessons.forEach(async lesson => {
 
